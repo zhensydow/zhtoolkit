@@ -4,4 +4,8 @@
 
 ** Programs
 
+*** genpasswd
+
+    Generate a random password
+
 ** Libraries

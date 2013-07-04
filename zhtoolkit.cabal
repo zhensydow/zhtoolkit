@@ -21,16 +21,9 @@ Extra-source-files:  README.org
 
 Cabal-version:       >=1.10
 
-Executable zhtoolkit
-  -- .hs or .lhs file containing the Main module.
-  -- Main-is:             
-  
-  -- Packages needed in order to build this package.
-  -- Build-depends:       
-  
-  -- Modules not exported by this package.
-  -- Other-modules:       
-  
-  -- Extra tools (e.g. alex, hsc2hs, ...) needed to build the source.
-  -- Build-tools:         
-  
+Executable genpasswd
+  Default-language:  Haskell2010
+  Main-is:           GenPasswd.hs
+  Build-Depends:     base, random >= 1
+  Hs-source-dirs:    src
+  Ghc-options:       -Wall
