@@ -8,4 +8,15 @@
 
     Generate a random password
 
+    Usage: genpasswd [Options]
+    -n N    number of characters
+
+
 ** Libraries
+
+** Installation
+
+
+#+BEGIN_SRC haskell
+sudo cabal install --global
+#+END_SRC
