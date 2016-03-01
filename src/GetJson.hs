@@ -27,6 +27,6 @@ main = do
   args <- getArgs
   if length args /= 2
   then printUsageInfo
-  else runGetJson (args!!0) (args!!1)
+  else runGetJson (head args) (args!!1)
 
 -- -----------------------------------------------------------------------------

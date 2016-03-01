@@ -31,7 +31,7 @@ main = do
   args <- getArgs
   case getOpt Permute options args of
     (xs, _, []) -> case foldl ebind (Right defaultOptions) xs of
-                     Right opts -> putStrLn . show $ opts
+                     Right opts -> print opts
                      Left err -> error $ err ++ usageInfo h options
     (_, _, zs) -> error $ concat zs ++ usageInfo h options
 
@@ -46,7 +46,7 @@ ebind x f = case x of
 setStartIndex :: String -> Options -> Either String Options
 setStartIndex n opts = case readMaybe n of
   Just num
-    | num < 0 -> Left $ "Error, index must be >= 0\n"
+    | num < 0 -> Left "Error, index must be >= 0\n"
     | otherwise -> Right $ opts { startIndex = num }
   _ -> Left $ "Error, invalid number syntax: " ++ n ++ "\n"
 

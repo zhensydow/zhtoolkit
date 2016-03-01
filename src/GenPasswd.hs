@@ -58,7 +58,7 @@ runGenPasswd opts = getStdGen >>= putStrLn . take (numChars opts) . randomList
 setNumChars :: String -> Options -> Either String Options
 setNumChars n opts = case readMaybe n of
   Just num
-    | num <= 0 -> Left $ "Error, number of chars must be > 0\n"
+    | num <= 0 -> Left "Error, number of chars must be > 0\n"
     | otherwise -> Right $ opts { numChars = num }
   _ -> Left $ "Error, invalid number syntax: " ++ n ++ "\n"
 
