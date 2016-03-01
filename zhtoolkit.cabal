@@ -27,3 +27,10 @@ Executable genpasswd
   Build-Depends:     base, random >= 1
   Hs-source-dirs:    src
   Ghc-options:       -Wall
+
+Executable arrangedate
+  Default-language:  Haskell2010
+  Main-is:           ArrangeDate.hs
+  Build-Depends:     base, random >= 1
+  Hs-source-dirs:    src
+  Ghc-options:       -Wall
