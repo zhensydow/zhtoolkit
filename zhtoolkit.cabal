@@ -34,3 +34,10 @@ Executable arrangedate
   Build-Depends:     base, random >= 1
   Hs-source-dirs:    src
   Ghc-options:       -Wall
+
+Executable getjson
+  Default-language:  Haskell2010
+  Main-is:           GetJson.hs
+  Build-Depends:     base
+  Hs-source-dirs:    src
+  Ghc-options:       -Wall
